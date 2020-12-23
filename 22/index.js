@@ -23,11 +23,11 @@ for (const line of lines) {
 
 while (player1.length !== 0 && player2.length !== 0) {
     if (player1[0] > player2[0]) {
-        player1.push(player1.splice(0, 1)[0]);
-        player1.push(player2.splice(0, 1)[0]);
+        player1.push(player1.shift());
+        player1.push(player2.shift());
     } else {
-        player2.push(player2.splice(0, 1)[0]);
-        player2.push(player1.splice(0, 1)[0]);
+        player2.push(player2.shift());
+        player2.push(player1.shift());
     }
 }
 
